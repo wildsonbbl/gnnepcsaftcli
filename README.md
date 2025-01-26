@@ -18,6 +18,60 @@ pipx install gnnepcsaftcli
 
 Checkpoints can be found at [Hugging Face](https://huggingface.co/wildsonbbl/gnnepcsaft).
 
+## CLI
+
+GNNePCsAFT CLI
+
+**Usage**:
+
+```console
+gnnepcsaftcli [OPTIONS] COMMAND [ARGS]...
+```
+
+**Options**:
+
+- `--install-completion`: Install completion for the current shell.
+- `--show-completion`: Show completion for the current shell, to copy it or customize the installation.
+- `--help`: Show this message and exit.
+
+**Commands**:
+
+- `pred`: Predict ePCSAFT parameters from SMILES...
+- `config`: Set the paths to the GNNePCsAFT models
+
+## `pred`
+
+Predict ePCSAFT parameters from SMILES with a GNNePCSAFT model
+
+**Usage**:
+
+```console
+gnnepcsaftcli pred [OPTIONS]
+```
+
+**Options**:
+
+- `--help`: Show this message and exit.
+
+## `config`
+
+Set the paths to the GNNePCSAFT models
+
+**Usage**:
+
+```console
+gnnepcsaftcli config [OPTIONS] MSIGMAE_PATH ASSOC_PATH
+```
+
+**Arguments**:
+
+- `MSIGMAE_PATH`: Path to the m, sigma, e model [required]
+- `ASSOC_PATH`: Path to the assoc model [required]
+
+**Options**:
+
+- `--help`: Show this message and exit.
+
 ---
 
 Work in progess.

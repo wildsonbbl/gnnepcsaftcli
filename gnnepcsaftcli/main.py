@@ -107,7 +107,7 @@ def config(
     assoc_path: Annotated[Path, typer.Argument(help="Path to the assoc model")],
 ):
     """
-    Set the paths to the GNNePCsAFT models
+    Set the paths to the GNNePCSAFT models
     """
     with open(config_path, "w", encoding="utf") as f:
         f.write(f'{{"msigmae_path": "{msigmae_path}", "assoc_path": "{assoc_path}"}}')
