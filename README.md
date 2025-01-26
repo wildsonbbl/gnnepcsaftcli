@@ -16,6 +16,8 @@ A CLI to use the model can be found at [GNNePCSAFT CLI](https://github.com/wilds
 pipx install gnnepcsaftcli
 ```
 
+Checkpoints can be found at [Hugging Face](https://huggingface.co/wildsonbbl/gnnepcsaft).
+
 ---
 
 Work in progess.
