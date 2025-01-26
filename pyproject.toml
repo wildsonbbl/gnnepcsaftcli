@@ -14,7 +14,7 @@ dependencies = [
     "lightning (>=2.5.0.post0,<3.0.0)",
     "rdkit (>=2024.9.4,<2025.0.0)",
     "ogb (>=1.3.6,<2.0.0)",
-    "gnnepcsaft @ https://github.com/wildsonbbl/gnnepcsaft/archive/refs/heads/dev.zip",
+    "gnnepcsaft",
     "ml-collections (==0.1.1)",
     "teqp (>=0.22.0,<0.23.0)",
     "feos (>=0.8.0,<0.9.0)",

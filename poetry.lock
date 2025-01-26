@@ -517,19 +517,16 @@ tqdm = ["tqdm"]
 
 [[package]]
 name = "gnnepcsaft"
-version = "1.0.1"
+version = "0.1.0"
 description = "GNNePCSAFT Project."
 optional = false
-python-versions = "*"
+python-versions = ">=3.9"
 groups = ["main"]
 markers = "python_version <= \"3.11\" or python_version >= \"3.12\""
 files = [
-    {file = "dev.zip", hash = "sha256:fba0cdb9f0f11d83d8cef5de19e2f22175826652805fb199ae089326b588aaf2"},
+    {file = "gnnepcsaft-0.1.0-py3-none-any.whl", hash = "sha256:691c2106415f3e24149578acc617ee15d9e5d9b882e699ca7f2e85951a83fa70"},
+    {file = "gnnepcsaft-0.1.0.tar.gz", hash = "sha256:57ee3f5359b3ef39253af8bbf526c19aa18edfa9592538e1e7f8522eb7d19d6a"},
 ]
-
-[package.source]
-type = "url"
-url = "https://github.com/wildsonbbl/gnnepcsaft/archive/refs/heads/dev.zip"
 
 [[package]]
 name = "idna"
@@ -2362,4 +2359,4 @@ propcache = ">=0.2.0"
 [metadata]
 lock-version = "2.1"
 python-versions = ">=3.9"
-content-hash = "cbf94c23fef43b35ce13fa7751bb23cf9263e44a95cc289001580f3365e029df"
+content-hash = "bec3d0bda62ecd3289fd45979da30c3974877d305d414a23daa0a5f1a2e1d600"
