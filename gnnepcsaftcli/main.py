@@ -10,9 +10,11 @@ from rich.prompt import Prompt
 from typing_extensions import Annotated
 
 # lazy loads
-# import torch
-# from gnnepcsaft.data.graph import assoc_number, from_smiles, smilestoinchi
-# from gnnepcsaft.train.models import PNApcsaftL
+# import numpy as np
+# import onnxruntime as ort
+
+# from gnnepcsaft.data.ogb_utils import smiles2graph
+# from gnnepcsaft.data.rdkit_util import assoc_number, smilestoinchi
 
 app = typer.Typer()
 
@@ -32,14 +34,18 @@ def pred():
     """
     Predict ePCSAFT parameters from SMILES with a GNNePCSAFT model
     """
-    import torch
-
-    from gnnepcsaft.data.graph import assoc_number, from_smiles, smilestoinchi
-    from gnnepcsaft.train.models import PNApcsaftL
 
     if os.path.isfile(config_path) is False:
         richprint("Please, first config with [yellow]gnnepcsaftcli config[/yellow]")
         return
+    # pylint: disable=import-outside-toplevel
+    import numpy as np
+    import onnxruntime as ort
+
+    from gnnepcsaft.data.ogb_utils import smiles2graph
+    from gnnepcsaft.data.rdkit_util import assoc_number, smilestoinchi
+
+    ort.set_default_logger_severity(3)
 
     with open(config_path, "r", encoding="utf") as f:
         paths = literal_eval(f.read())
@@ -51,11 +57,8 @@ def pred():
         )
         return
 
-    msigmae_model = PNApcsaftL.load_from_checkpoint(msigmae_path, "cpu")
-    msigmae_model.eval()
-    if assoc_path:
-        assoc_model = PNApcsaftL.load_from_checkpoint(assoc_path, "cpu")
-        assoc_model.eval()
+    msigmae_onnx = ort.InferenceSession(msigmae_path)
+    assoc_onnx = ort.InferenceSession(assoc_path)
     while True:
         try:
             smiles = Prompt.ask(
@@ -73,28 +76,37 @@ def pred():
         try:
             inchi = smilestoinchi(smiles)
             na, nb = assoc_number(inchi)
-            g = from_smiles(smiles)
-            with torch.no_grad():
-                assoc = (
-                    (
-                        10
-                        ** (
-                            assoc_model.model.pred_with_bounds(g)
-                            * torch.tensor([-1.0, 1.0])
-                        )
-                    )
-                    .numpy()
-                    .round(decimals=4)[0]
+            g = smiles2graph(smiles)
+            x, edge_index, edge_attr = g["node_feat"], g["edge_index"], g["edge_feat"]
+
+            assoc = (
+                10
+                ** (
+                    assoc_onnx.run(
+                        None,
+                        {
+                            "x": x,
+                            "edge_index": edge_index,
+                            "edge_attr": edge_attr,
+                        },
+                    )[0][0]
+                    * np.asarray([-1.0, 1.0])
                 )
-                if na == 0 and nb == 0:
-                    assoc *= 0
-                msigmae = (
-                    msigmae_model.model.pred_with_bounds(g).numpy().round(decimals=4)[0]
-                )
-                richprint("[ m sigma e ]: " + str(msigmae))
-                richprint("[ k_ab e_ab ]: " + str(assoc))
-                richprint(f"[  na, nb   ]: [  {na}, {nb}  ]")
-        except Exception:
+            ).round(decimals=4)
+            if na == 0 and nb == 0:
+                assoc *= 0
+            msigmae = msigmae_onnx.run(
+                None,
+                {
+                    "x": x,
+                    "edge_index": edge_index,
+                    "edge_attr": edge_attr,
+                },
+            )[0].round(decimals=4)[0]
+            richprint("[ m sigma e ]: " + str(msigmae))
+            richprint("[ k_ab e_ab ]: " + str(assoc))
+            richprint(f"[  na, nb   ]: [  {na}, {nb}  ]")
+        except Exception as e:
             richprint(
                 "[red]Error[/red]: [yellow]SMILES[/yellow] not valid, "
                 "please enter a valid [yellow]SMILES[/yellow]"

@@ -1,2 +1,3 @@
 **/dist/**
 **/*.ckpt
+**/__pycache__
