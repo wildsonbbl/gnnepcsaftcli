@@ -47,21 +47,6 @@ humanfriendly = ">=9.1"
 cron = ["capturer (>=2.4)"]
 
 [[package]]
-name = "feos"
-version = "0.8.0"
-description = "FeOs - A framework for equations of state and classical density functional theory."
-optional = false
-python-versions = "*"
-groups = ["main"]
-files = [
-    {file = "feos-0.8.0-cp39-abi3-macosx_10_12_x86_64.whl", hash = "sha256:e33a0815e223c8fa711d613485112695d97780cef0f2f89263a9b75340e5c5de"},
-    {file = "feos-0.8.0-cp39-abi3-macosx_11_0_arm64.whl", hash = "sha256:98090cacb69d0ee6a317d8441b91d83b09e01323684cd6b735d5ff290009f160"},
-    {file = "feos-0.8.0-cp39-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:a6c2d5228a4b31924d6682f747b7a2f975df4203c89bb59f6f5467e65a3658a7"},
-    {file = "feos-0.8.0-cp39-abi3-win32.whl", hash = "sha256:ccca95c3e5d7f41d843c900207cb32ccca14057fc7a12aa63fbd4a89f3755be4"},
-    {file = "feos-0.8.0-cp39-abi3-win_amd64.whl", hash = "sha256:fb0adc56e6fee0b0ff19d9df1904123b40ef04effb26ff6f74e5481f49b47191"},
-]
-
-[[package]]
 name = "flatbuffers"
 version = "25.1.24"
 description = "The FlatBuffers serialization format for Python"
@@ -260,51 +245,6 @@ files = [
     {file = "packaging-24.2-py3-none-any.whl", hash = "sha256:09abb1bccd265c01f4a3aa3f7a7db064b36514d2cba19a2f694fe6150451a759"},
     {file = "packaging-24.2.tar.gz", hash = "sha256:c228a6dc5e932d346bc5739379109d49e8853dd8223571c7c5b55260edc0b97f"},
 ]
-
-[[package]]
-name = "pcsaftsuperanc"
-version = "0.0.7"
-description = "Superancillary functions for the PC-SAFT EOS of Gross and Sadowski"
-optional = false
-python-versions = ">=3.6"
-groups = ["main"]
-files = [
-    {file = "PCSAFTsuperanc-0.0.7-cp310-cp310-macosx_10_15_universal2.whl", hash = "sha256:52b26a70436818ea84b672b5531476a349b1c358a60b35671781ecf1b66b925f"},
-    {file = "PCSAFTsuperanc-0.0.7-cp310-cp310-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:09fedbeb77f85a8058fad12b16a96c831eb04c2941723a82f772a30caa10e6eb"},
-    {file = "PCSAFTsuperanc-0.0.7-cp310-cp310-musllinux_1_1_x86_64.whl", hash = "sha256:129478062f3b01b3221e1e5c9a5aab318526511b0ab2567dca525827bea158e0"},
-    {file = "PCSAFTsuperanc-0.0.7-cp310-cp310-win_amd64.whl", hash = "sha256:af02715ddb89987183aa15b2224d21f17e91daeefd785c84573fc39c7eceb289"},
-    {file = "PCSAFTsuperanc-0.0.7-cp311-cp311-macosx_10_15_universal2.whl", hash = "sha256:729097158c291e4ee0b355ce8009f49fe4feac35645747676a05b13da10c5f2f"},
-    {file = "PCSAFTsuperanc-0.0.7-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:496e9777a29688b9f090e212bb5c6b9b9dec01e7b5acf82b35b2448d9b3e4138"},
-    {file = "PCSAFTsuperanc-0.0.7-cp311-cp311-musllinux_1_1_x86_64.whl", hash = "sha256:c2295f0558a06e432527152c7804fa296ac0c37ba43938cc8a69b988749a2b7a"},
-    {file = "PCSAFTsuperanc-0.0.7-cp311-cp311-win_amd64.whl", hash = "sha256:668d43e9180a889686cf2c60915cee9e36b081c81cb6f00b3487bf64e8ab0f81"},
-    {file = "PCSAFTsuperanc-0.0.7-cp312-cp312-macosx_10_15_universal2.whl", hash = "sha256:f893d1b81de3dbd684a826e8ce44cb471b50c622541fe4dd132eb8b9a29d17a7"},
-    {file = "PCSAFTsuperanc-0.0.7-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:f5345697b4853edb0ddd225167ae4fc944e8ac6ea38c829ebfcf626ac1232a3f"},
-    {file = "PCSAFTsuperanc-0.0.7-cp312-cp312-musllinux_1_1_x86_64.whl", hash = "sha256:8ff01accc11af11f781778b3817190d0984da643880704a8ec6d25872058e4a0"},
-    {file = "PCSAFTsuperanc-0.0.7-cp312-cp312-win_amd64.whl", hash = "sha256:e8322ba79dc2f5b4bc15375f45f89ccaa53275127800e57dd6c5b365b34ac203"},
-    {file = "PCSAFTsuperanc-0.0.7-cp36-cp36m-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:d7033c49b27dd8f350860cb1739d2f545f061c6ccaf840af8c54c2a7f25f0688"},
-    {file = "PCSAFTsuperanc-0.0.7-cp36-cp36m-musllinux_1_1_x86_64.whl", hash = "sha256:18e83e7e580cba8410b08a035591748780abcb5a958d2bdb75d1b279123a6390"},
-    {file = "PCSAFTsuperanc-0.0.7-cp36-cp36m-win_amd64.whl", hash = "sha256:247376c237ba4c16afebfe74b0d5a2268527d0a1480889b240e30ccf3d5cf1b0"},
-    {file = "PCSAFTsuperanc-0.0.7-cp37-cp37m-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:615caecc60daec39e4d04bff6f4044c8e38f60b474e4c50738cf541295b4fdb4"},
-    {file = "PCSAFTsuperanc-0.0.7-cp37-cp37m-musllinux_1_1_x86_64.whl", hash = "sha256:bed66a695dc51fcdee6ca17373d28544e018405b79699074a5f3d7f002d23864"},
-    {file = "PCSAFTsuperanc-0.0.7-cp37-cp37m-win_amd64.whl", hash = "sha256:2d1bb6642bd3cf4f12989302d87f605bce0ac11e7ce21cefcecd5c517c703cdd"},
-    {file = "PCSAFTsuperanc-0.0.7-cp38-cp38-macosx_10_15_universal2.whl", hash = "sha256:71f197b8804e98ae3866913efd10d51f47c4cb01e8685ad41e0b18e89a29efd2"},
-    {file = "PCSAFTsuperanc-0.0.7-cp38-cp38-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:2d9be6c88ec3552083aefb2136233cf4ff09e5a77d3b36b59339e7744a604bfd"},
-    {file = "PCSAFTsuperanc-0.0.7-cp38-cp38-musllinux_1_1_x86_64.whl", hash = "sha256:90a2912b001159d1a762adaf7176081f147f451b64a1f6b398c2a4f3c06e3f3a"},
-    {file = "PCSAFTsuperanc-0.0.7-cp38-cp38-win_amd64.whl", hash = "sha256:3f943b5a8c2e0b1a5f4be902c698e276370c25b62dbe8f6214da5390b80b3fd0"},
-    {file = "PCSAFTsuperanc-0.0.7-cp39-cp39-macosx_10_15_universal2.whl", hash = "sha256:068efef636fbdb45a9a62095da89214a7638101706b39488bebd44c1b3251761"},
-    {file = "PCSAFTsuperanc-0.0.7-cp39-cp39-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:dbbe9b948effd31ada81783f57036b893a275c88c393dbd4a3402ef36942444a"},
-    {file = "PCSAFTsuperanc-0.0.7-cp39-cp39-musllinux_1_1_x86_64.whl", hash = "sha256:7e91a1723edf9110a269dc49092a1cff7a9768b872323960ae411b902fd0a751"},
-    {file = "PCSAFTsuperanc-0.0.7-cp39-cp39-win_amd64.whl", hash = "sha256:9b1457c8a94c2731621b766b89fefd385bcd94bbf21719c2e347dbc532ff18d7"},
-    {file = "PCSAFTsuperanc-0.0.7-pp37-pypy37_pp73-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:5637c5e4075524d9e7ab5a366e2a96b8174147a6eba53e632be35e0d05eee328"},
-    {file = "PCSAFTsuperanc-0.0.7-pp37-pypy37_pp73-win_amd64.whl", hash = "sha256:96243f3dd22d521c3311153db62533aa0cdbfd3b582fd7e496d9c2125734a193"},
-    {file = "PCSAFTsuperanc-0.0.7-pp38-pypy38_pp73-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:2d78a0516524457a9107eb4c906d563a559e3dfd016bd8f575a308075fddb993"},
-    {file = "PCSAFTsuperanc-0.0.7-pp38-pypy38_pp73-win_amd64.whl", hash = "sha256:2940a813fc474a329411f90772ee983c5eddf22b050629e18eabb4a86d507b0c"},
-    {file = "PCSAFTsuperanc-0.0.7-pp39-pypy39_pp73-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:725c65a2883f3114364ae5e5fc63935a7c75bee383627f2fc1d5926398f6a9a6"},
-    {file = "PCSAFTsuperanc-0.0.7-pp39-pypy39_pp73-win_amd64.whl", hash = "sha256:d7378886577210a3a8813f8e3a970632f3147cc1d8c3d4ae8b8ff79f78545629"},
-]
-
-[package.extras]
-test = ["pytest (>=6.0)"]
 
 [[package]]
 name = "pillow"
@@ -519,21 +459,6 @@ files = [
 ]
 
 [[package]]
-name = "si-units"
-version = "0.11.0"
-description = "Representation of quantites, i.e. of unit valued scalars and arrays."
-optional = false
-python-versions = ">=3.9"
-groups = ["main"]
-files = [
-    {file = "si_units-0.11.0-cp39-abi3-macosx_10_12_x86_64.whl", hash = "sha256:a626e1d15b7cded6a2775eb0b0a99010e10232df57250b3cf17657354ba996ac"},
-    {file = "si_units-0.11.0-cp39-abi3-macosx_11_0_arm64.whl", hash = "sha256:5313899dcafcd7cce45fba37b92e9781893026ddf33439f9a659b3f96271ef45"},
-    {file = "si_units-0.11.0-cp39-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:36bcd77faad6cbde5753c20770790712caf8140eacf51435d11ac159ca03218e"},
-    {file = "si_units-0.11.0-cp39-abi3-win32.whl", hash = "sha256:e2bda9198095f0dc4279ceda473ed8816611eca34eea350a610a1196a70ddb87"},
-    {file = "si_units-0.11.0-cp39-abi3-win_amd64.whl", hash = "sha256:db1150584f0916e53c92f615da6609bf22a1035ff66d861637a144473e38d607"},
-]
-
-[[package]]
 name = "sympy"
 version = "1.13.3"
 description = "Computer algebra system (CAS) in Python"
@@ -550,32 +475,6 @@ mpmath = ">=1.1.0,<1.4"
 
 [package.extras]
 dev = ["hypothesis (>=6.70.0)", "pytest (>=7.1.0)"]
-
-[[package]]
-name = "teqp"
-version = "0.22.0"
-description = "Templated EQuation of state Package"
-optional = false
-python-versions = "*"
-groups = ["main"]
-files = [
-    {file = "teqp-0.22.0-cp310-cp310-macosx_11_0_universal2.whl", hash = "sha256:43a1f124c9a017267f54842f6eb30efd63b419ce91a0fcb8f9549704d6b6d03f"},
-    {file = "teqp-0.22.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:9c2406b9b674630261d32f1b3ab91816f995407c7c08a0c7f0ff0a97e491246b"},
-    {file = "teqp-0.22.0-cp310-cp310-win_amd64.whl", hash = "sha256:71113cc46a423aa56ba64f44877b0bc73123de3c3cae60a04f998585b52e58b5"},
-    {file = "teqp-0.22.0-cp311-cp311-macosx_11_0_universal2.whl", hash = "sha256:4e6d85f8a18cd6003b8a9fd9d690320e8b563cebabd752cabf4d52163fb180ac"},
-    {file = "teqp-0.22.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:86b71647cbd979e5b70559a00fd65b51ae40f6911f1940c653ae1a7591de264c"},
-    {file = "teqp-0.22.0-cp311-cp311-win_amd64.whl", hash = "sha256:a32b9bc8eb17168daaa97c513239e892df434e1f5eaab8428f53696e9906c385"},
-    {file = "teqp-0.22.0-cp312-cp312-macosx_11_0_universal2.whl", hash = "sha256:c82739a85eed6dcb1aa939e76d45b538752a067cc777a1e22f488e06de30c112"},
-    {file = "teqp-0.22.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:57c19b75eb7511359e33efa917b74d54437309c0852e379d6fdeee4140584bff"},
-    {file = "teqp-0.22.0-cp312-cp312-win_amd64.whl", hash = "sha256:3f476eecb0e906842bc1705a72232e3df96fb87593dcbbfdf46cefbada926be6"},
-    {file = "teqp-0.22.0-cp38-cp38-macosx_11_0_universal2.whl", hash = "sha256:82068414ed903846cb34f394c21561acac3491ecdf525040c97ebfb3114ad35a"},
-    {file = "teqp-0.22.0-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:c8e38555ea3b6b059caad3751cd3160e6d6aa206fed0b04ef690b592e5363286"},
-    {file = "teqp-0.22.0-cp38-cp38-win_amd64.whl", hash = "sha256:f312f65d76a1ef4d913cfc2ee207e6cf197899b8c1722c549f645e568f85a555"},
-    {file = "teqp-0.22.0-cp39-cp39-macosx_11_0_universal2.whl", hash = "sha256:a63ae847036d723ef20acf4b5613d5a1c27cbc117d594523d421ac62c4102f3d"},
-    {file = "teqp-0.22.0-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:4c99f8318ae537612895f4b3e1c243dd76b8273842ecb39fd0e4b9289e92ee56"},
-    {file = "teqp-0.22.0-cp39-cp39-win_amd64.whl", hash = "sha256:d38f3d003e6060e0b4cf360731a2d570892cb146797bc1183e85ddae09f8e341"},
-    {file = "teqp-0.22.0.tar.gz", hash = "sha256:1db8efafa0e5512a06cba12eb502b09ac7d4188f531153530042775bce0a6b9f"},
-]
 
 [[package]]
 name = "typer"
@@ -610,4 +509,4 @@ files = [
 [metadata]
 lock-version = "2.1"
 python-versions = ">=3.9"
-content-hash = "d7e9c2c1088180b485bc53f97adbde0fb459a6bce0a9e3e949c8ec66f9b4ed29"
+content-hash = "950131b03200b111582a362cf51471b0e6fb3da4bfbfe7da0c2f3ce895f6789b"

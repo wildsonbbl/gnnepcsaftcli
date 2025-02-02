@@ -115,11 +115,11 @@ def pred():
 
 @app.command()
 def config(
-    msigmae_path: Annotated[Path, typer.Argument(help="Path to the m, sigma, e model")],
-    assoc_path: Annotated[Path, typer.Argument(help="Path to the assoc model")],
+    msigmae_path: Annotated[str, typer.Argument(help="Path to the m, sigma, e model")],
+    assoc_path: Annotated[str, typer.Argument(help="Path to the assoc model")],
 ):
     """
-    Set the paths to the GNNePCSAFT models
+    Set the paths to the ONNX GNNePCSAFT model files
     """
     with open(config_path, "w", encoding="utf") as f:
         f.write(f'{{"msigmae_path": "{msigmae_path}", "assoc_path": "{assoc_path}"}}')

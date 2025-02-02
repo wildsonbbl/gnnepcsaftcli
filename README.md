@@ -20,7 +20,7 @@ Checkpoints can be found at [Hugging Face](https://huggingface.co/wildsonbbl/gnn
 
 ## CLI
 
-GNNePCsAFT CLI
+GNNePCsAFT CLI tool
 
 **Usage**:
 
@@ -37,7 +37,7 @@ gnnepcsaftcli [OPTIONS] COMMAND [ARGS]...
 **Commands**:
 
 - `pred`: Predict ePCSAFT parameters from SMILES...
-- `config`: Set the paths to the GNNePCsAFT models
+- `config`: Set the paths to the ONNX GNNePCSAFT model...
 
 ## `pred`
 
@@ -46,7 +46,7 @@ Predict ePCSAFT parameters from SMILES with a GNNePCSAFT model
 **Usage**:
 
 ```console
-gnnepcsaftcli pred [OPTIONS]
+pred [OPTIONS]
 ```
 
 **Options**:
@@ -55,12 +55,12 @@ gnnepcsaftcli pred [OPTIONS]
 
 ## `config`
 
-Set the paths to the GNNePCSAFT models
+Set the paths to the ONNX GNNePCSAFT model files
 
 **Usage**:
 
 ```console
-gnnepcsaftcli config [OPTIONS] MSIGMAE_PATH ASSOC_PATH
+config [OPTIONS] MSIGMAE_PATH ASSOC_PATH
 ```
 
 **Arguments**:
