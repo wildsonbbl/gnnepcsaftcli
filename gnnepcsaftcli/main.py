@@ -2,7 +2,6 @@
 
 import os
 from ast import literal_eval
-from pathlib import Path
 
 import typer
 from rich import print as richprint
@@ -65,9 +64,10 @@ def pred():
                 "\nEnter a valid[green] SMILES [/green]or Press [yellow]Ctrl+C[/yellow] to exit",
             )
             richprint(
-                "\n:star2::test_tube::thermometer: [yellow]Predicting parameters for SMILES:[/yellow] [green]"
-                + smiles
-                + "[/green] :star2::test_tube::thermometer:\n"
+                f"\n:star2::test_tube::thermometer: "
+                f"[yellow]Predicting parameters for SMILES:[/yellow] "
+                f"[green]{smiles}[/green] "
+                f":star2::test_tube::thermometer:\n"
             )
         except KeyboardInterrupt:
             richprint("\n[green] :rocket:  Bye! :rocket: [/green]")
@@ -106,7 +106,7 @@ def pred():
             richprint("[ m sigma e ]: " + str(msigmae))
             richprint("[ k_ab e_ab ]: " + str(assoc))
             richprint(f"[  na, nb   ]: [  {na}, {nb}  ]")
-        except Exception as e:
+        except Exception:
             richprint(
                 "[red]Error[/red]: [yellow]SMILES[/yellow] not valid, "
                 "please enter a valid [yellow]SMILES[/yellow]"
