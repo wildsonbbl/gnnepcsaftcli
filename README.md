@@ -10,13 +10,16 @@ Code is being developed mainly in Pytorch (PYG).
 
 You can find the model deployed at [GNNePCSAFT Webapp](https://gnnepcsaft.wildsonbbl.com/).
 
-A CLI to use the model can be found at [GNNePCSAFT CLI](https://github.com/wildsonbbl/gnnepcsaftcli) and installed with `pipx`:
+A CLI to use the model can be found at [GNNePCSAFT CLI](https://github.com/wildsonbbl/gnnepcsaftcli) and installed with `pipx` or `uvx`:
 
 ```bash
 pipx install gnnepcsaftcli
+gnnepcsaftcli pred
 ```
 
-Checkpoints can be found at [Hugging Face](https://huggingface.co/wildsonbbl/gnnepcsaft).
+```bash
+uvx gnnepcsaftcli pred
+```
 
 ## CLI
 
@@ -37,7 +40,6 @@ gnnepcsaftcli [OPTIONS] COMMAND [ARGS]...
 **Commands**:
 
 - `pred`: Predict ePCSAFT parameters from SMILES...
-- `config`: Set the paths to the ONNX GNNePCSAFT model...
 
 ## `pred`
 
@@ -52,26 +54,3 @@ pred [OPTIONS]
 **Options**:
 
 - `--help`: Show this message and exit.
-
-## `config`
-
-Set the paths to the ONNX GNNePCSAFT model files
-
-**Usage**:
-
-```console
-config [OPTIONS] MSIGMAE_PATH ASSOC_PATH
-```
-
-**Arguments**:
-
-- `MSIGMAE_PATH`: Path to the m, sigma, e model [required]
-- `ASSOC_PATH`: Path to the assoc model [required]
-
-**Options**:
-
-- `--help`: Show this message and exit.
-
----
-
-Work in progess.

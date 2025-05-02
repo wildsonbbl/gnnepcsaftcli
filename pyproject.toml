@@ -1,6 +1,6 @@
 [project]
 name = "gnnepcsaftcli"
-version = "0.4.0"
+version = "0.5.0"
 description = ""
 authors = [
     {name = "wildsonbbl",email = "wil_bbl@hotmail.com"}
@@ -12,6 +12,7 @@ dependencies = [
     "rdkit (>=2024.9.4,<2025.0.0)",
     "gnnepcsaft",
     "onnxruntime (>=1.20.1,<2.0.0)",
+    "gnnepcsaft-mcp-server (>=0.2.3,<0.3.0)",
 
 ]
 
