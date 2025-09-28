@@ -29,7 +29,7 @@ def callback():
 @app.command()
 def pred():
     """
-    Predict ePCSAFT parameters from SMILES with a GNNePCSAFT model
+    Predict PCSAFT parameters from SMILES with a GNNePCSAFT model
     """
 
     while True:
