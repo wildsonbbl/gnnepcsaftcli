@@ -1,7 +1,7 @@
 [project]
 name = "gnnepcsaftcli"
-version = "0.5.0"
-description = ""
+version = "0.5.1"
+description = "CLI for GNNePCSAFT"
 authors = [
     {name = "wildsonbbl",email = "wil_bbl@hotmail.com"}
 ]
