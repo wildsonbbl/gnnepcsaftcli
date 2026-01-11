@@ -1,24 +1,17 @@
 # GNNePCSAFT CLI
 
-Project focused in the use of graph neural networks to estimate the pure-component parameters of the Equation of State [PC-SAFT](https://en.wikipedia.org/wiki/PC-SAFT).
+The project focuses on using Graph Neural Networks ([GNN](https://en.wikipedia.org/wiki/Graph_neural_network)) to estimate the pure-component parameters of the Equation of State [PC-SAFT](https://en.wikipedia.org/wiki/PC-SAFT).
 
-The motivation of this work is to be able to use a robust Equation of State, PC-SAFT, without prior need of experimental data. Equations of State are important to calculate thermodynamic properties, and are pre-requisite in process simulators.
+Currently, the model takes into account the hard-chain, dispersive, and associative terms of PC-SAFT. Future work on polar and ionic terms is being studied.
 
-Currently, the model takes in account only the hard-chain, dispersive and assoc terms of PC-SAFT. Future work on polar and ionic terms are being studied.
+Code is being developed mainly in Pytorch ([PyG](https://pytorch-geometric.readthedocs.io/en/latest/index.html#)).
 
-Code is being developed mainly in Pytorch (PYG).
+You can find a model deployed in a Desktop App at [SourceForge](https://sourceforge.net/projects/gnnepcsaft/).
 
-You can find the model deployed at [GNNePCSAFT Webapp](https://gnnepcsaft.wildsonbbl.com/).
-
-A CLI to use the model can be found at [GNNePCSAFT CLI](https://github.com/wildsonbbl/gnnepcsaftcli) and installed with `pipx` or `uvx`:
+A CLI to use a model can be found at [GNNePCSAFT CLI](https://github.com/wildsonbbl/gnnepcsaftcli) and installed with [pipx](https://github.com/pypa/pipx):
 
 ```bash
 pipx install gnnepcsaftcli
-gnnepcsaftcli pred
-```
-
-```bash
-uvx gnnepcsaftcli pred
 ```
 
 ## CLI
