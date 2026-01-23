@@ -1,6 +1,6 @@
-# GNNePCSAFT CLI
+# GNNPCSAFT CLI
 
-The GNNePCSAFT CLI is an implementation of [our project](https://github.com/wildsonbbl/gnnepcsaft/) that focuses on using Graph Neural Networks ([GNN](https://en.wikipedia.org/wiki/Graph_neural_network)) to estimate the pure-component parameters of the Equation of State [PC-SAFT](https://en.wikipedia.org/wiki/PC-SAFT). We developed this CLI so the scientific community can access the model's results easily.
+The GNNPCSAFT CLI is an implementation of [our project](https://github.com/wildsonbbl/gnnepcsaft/) that focuses on using Graph Neural Networks ([GNN](https://en.wikipedia.org/wiki/Graph_neural_network)) to estimate the pure-component parameters of the Equation of State [PC-SAFT](https://en.wikipedia.org/wiki/PC-SAFT). We developed this CLI so the scientific community can access the model's results easily.
 
 You can usually find an app for the project at [SourceForge](https://sourceforge.net/projects/gnnepcsaft/).
 
@@ -12,7 +12,7 @@ pipx install gnnepcsaftcli
 
 ## CLI
 
-GNNePCSAFT CLI tool
+GNNPCSAFT CLI tool
 
 **Usage**:
 
@@ -32,7 +32,7 @@ gnnepcsaftcli [OPTIONS] COMMAND [ARGS]...
 
 ## `pred`
 
-Predict PCSAFT parameters from SMILES with a GNNePCSAFT model
+Predict PCSAFT parameters from SMILES with a GNNPCSAFT model
 
 **Usage**:
 
