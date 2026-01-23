@@ -15,7 +15,7 @@ file_dir = Path(__file__)
 @app.callback()
 def callback():
     """
-    GNNPCsAFT CLI tool
+    GNNPCSAFT CLI
     """
 
 
